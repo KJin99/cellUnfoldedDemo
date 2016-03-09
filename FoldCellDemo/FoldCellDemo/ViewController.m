@@ -55,7 +55,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.navigationItem.title = @"订单列表";
+    self.navigationItem.title = @"列表";
     
     rightBtn = [[MyNavigationButton alloc]initWithFrame:CGRectMake(0, 0, 100, 20)];
     [rightBtn setTitle:@"全部展开" forState:UIControlStateNormal];
