@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFE75B931CB5F33A003447D7 /* CellNumberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE75B8D1CB5F33A003447D7 /* CellNumberModel.m */; };
+		AFE75B941CB5F33A003447D7 /* OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE75B901CB5F33A003447D7 /* OrderCell.m */; };
+		AFE75B951CB5F33A003447D7 /* OrderHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE75B921CB5F33A003447D7 /* OrderHeaderView.m */; };
+		AFE75B981CB5F358003447D7 /* FoldCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE75B971CB5F358003447D7 /* FoldCellViewController.m */; };
+		AFE75B9F1CB5F498003447D7 /* WordsInCellFoldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE75B9E1CB5F498003447D7 /* WordsInCellFoldVC.m */; };
+		AFE75BA21CB5F762003447D7 /* RemarksTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE75BA11CB5F762003447D7 /* RemarksTableViewCell.m */; };
+		AFE75BA51CB5F828003447D7 /* RemarksCellHeightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE75BA41CB5F828003447D7 /* RemarksCellHeightModel.m */; };
+		AFE75BA71CB5FADF003447D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE75BA61CB5FADF003447D7 /* Images.xcassets */; };
+		AFE75BAD1CB63A28003447D7 /* OneCellFoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE75BAC1CB63A28003447D7 /* OneCellFoldViewController.m */; };
 		AFE842871C0586FC0028A1BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842861C0586FC0028A1BA /* main.m */; };
 		AFE8428A1C0586FC0028A1BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842891C0586FC0028A1BA /* AppDelegate.m */; };
 		AFE8428D1C0586FC0028A1BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE8428C1C0586FC0028A1BA /* ViewController.m */; };
@@ -15,22 +24,19 @@
 		AFE842951C0586FC0028A1BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE842931C0586FC0028A1BA /* LaunchScreen.storyboard */; };
 		AFE842A01C0586FD0028A1BA /* FoldCellDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE8429F1C0586FD0028A1BA /* FoldCellDemoTests.m */; };
 		AFE842AB1C0586FD0028A1BA /* FoldCellDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842AA1C0586FD0028A1BA /* FoldCellDemoUITests.m */; };
-		AFE842D61C0588C10028A1BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFE842BA1C0588C10028A1BA /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		AFE842D71C0588C10028A1BA /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842BC1C0588C10028A1BA /* MASCompositeConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842D81C0588C10028A1BA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842BF1C0588C10028A1BA /* MASConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842D91C0588C10028A1BA /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842C11C0588C10028A1BA /* MASConstraintMaker.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842DA1C0588C10028A1BA /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842C31C0588C10028A1BA /* MASLayoutConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842DB1C0588C10028A1BA /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842C71C0588C10028A1BA /* MASViewAttribute.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842DC1C0588C10028A1BA /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842C91C0588C10028A1BA /* MASViewConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842DD1C0588C10028A1BA /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842CB1C0588C10028A1BA /* NSArray+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842DE1C0588C10028A1BA /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842CE1C0588C10028A1BA /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842DF1C0588C10028A1BA /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842D01C0588C10028A1BA /* View+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842E01C0588C10028A1BA /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842D31C0588C10028A1BA /* ViewController+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842E61C05A73C0028A1BA /* CellNumberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842E51C05A73C0028A1BA /* CellNumberModel.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842EB1C05A74D0028A1BA /* OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842E81C05A74D0028A1BA /* OrderCell.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842EC1C05A74D0028A1BA /* OrderHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842EA1C05A74D0028A1BA /* OrderHeaderView.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842F01C05A7D50028A1BA /* MyNavigationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842EF1C05A7D50028A1BA /* MyNavigationButton.m */; settings = {ASSET_TAGS = (); }; };
-		AFE842F21C05A8240028A1BA /* OrderList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFE842F11C05A8240028A1BA /* OrderList.plist */; settings = {ASSET_TAGS = (); }; };
+		AFE842D61C0588C10028A1BA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFE842BA1C0588C10028A1BA /* Info.plist */; };
+		AFE842D71C0588C10028A1BA /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842BC1C0588C10028A1BA /* MASCompositeConstraint.m */; };
+		AFE842D81C0588C10028A1BA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842BF1C0588C10028A1BA /* MASConstraint.m */; };
+		AFE842D91C0588C10028A1BA /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842C11C0588C10028A1BA /* MASConstraintMaker.m */; };
+		AFE842DA1C0588C10028A1BA /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842C31C0588C10028A1BA /* MASLayoutConstraint.m */; };
+		AFE842DB1C0588C10028A1BA /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842C71C0588C10028A1BA /* MASViewAttribute.m */; };
+		AFE842DC1C0588C10028A1BA /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842C91C0588C10028A1BA /* MASViewConstraint.m */; };
+		AFE842DD1C0588C10028A1BA /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842CB1C0588C10028A1BA /* NSArray+MASAdditions.m */; };
+		AFE842DE1C0588C10028A1BA /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842CE1C0588C10028A1BA /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		AFE842DF1C0588C10028A1BA /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842D01C0588C10028A1BA /* View+MASAdditions.m */; };
+		AFE842E01C0588C10028A1BA /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842D31C0588C10028A1BA /* ViewController+MASAdditions.m */; };
+		AFE842F01C05A7D50028A1BA /* MyNavigationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE842EF1C05A7D50028A1BA /* MyNavigationButton.m */; };
+		AFE842F21C05A8240028A1BA /* OrderList.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFE842F11C05A8240028A1BA /* OrderList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +57,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AFE75B8C1CB5F33A003447D7 /* CellNumberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellNumberModel.h; sourceTree = "<group>"; };
+		AFE75B8D1CB5F33A003447D7 /* CellNumberModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellNumberModel.m; sourceTree = "<group>"; };
+		AFE75B8F1CB5F33A003447D7 /* OrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCell.h; sourceTree = "<group>"; };
+		AFE75B901CB5F33A003447D7 /* OrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCell.m; sourceTree = "<group>"; };
+		AFE75B911CB5F33A003447D7 /* OrderHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHeaderView.h; sourceTree = "<group>"; };
+		AFE75B921CB5F33A003447D7 /* OrderHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHeaderView.m; sourceTree = "<group>"; };
+		AFE75B961CB5F358003447D7 /* FoldCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoldCellViewController.h; sourceTree = "<group>"; };
+		AFE75B971CB5F358003447D7 /* FoldCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoldCellViewController.m; sourceTree = "<group>"; };
+		AFE75B9D1CB5F498003447D7 /* WordsInCellFoldVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsInCellFoldVC.h; sourceTree = "<group>"; };
+		AFE75B9E1CB5F498003447D7 /* WordsInCellFoldVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsInCellFoldVC.m; sourceTree = "<group>"; };
+		AFE75BA01CB5F762003447D7 /* RemarksTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemarksTableViewCell.h; sourceTree = "<group>"; };
+		AFE75BA11CB5F762003447D7 /* RemarksTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemarksTableViewCell.m; sourceTree = "<group>"; };
+		AFE75BA31CB5F828003447D7 /* RemarksCellHeightModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemarksCellHeightModel.h; sourceTree = "<group>"; };
+		AFE75BA41CB5F828003447D7 /* RemarksCellHeightModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemarksCellHeightModel.m; sourceTree = "<group>"; };
+		AFE75BA61CB5FADF003447D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AFE75BAB1CB63A28003447D7 /* OneCellFoldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneCellFoldViewController.h; sourceTree = "<group>"; };
+		AFE75BAC1CB63A28003447D7 /* OneCellFoldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneCellFoldViewController.m; sourceTree = "<group>"; };
 		AFE842821C0586FC0028A1BA /* FoldCellDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoldCellDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE842861C0586FC0028A1BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AFE842881C0586FC0028A1BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFE842891C0586FC0028A1BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AFE8428B1C0586FC0028A1BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
-		AFE8428C1C0586FC0028A1BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
+		AFE8428B1C0586FC0028A1BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AFE8428C1C0586FC0028A1BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AFE8428F1C0586FC0028A1BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFE842911C0586FC0028A1BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFE842941C0586FC0028A1BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,12 +116,6 @@
 		AFE842D11C0588C10028A1BA /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		AFE842D21C0588C10028A1BA /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		AFE842D31C0588C10028A1BA /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		AFE842E41C05A73C0028A1BA /* CellNumberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellNumberModel.h; sourceTree = "<group>"; };
-		AFE842E51C05A73C0028A1BA /* CellNumberModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellNumberModel.m; sourceTree = "<group>"; };
-		AFE842E71C05A74D0028A1BA /* OrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCell.h; sourceTree = "<group>"; };
-		AFE842E81C05A74D0028A1BA /* OrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCell.m; sourceTree = "<group>"; };
-		AFE842E91C05A74D0028A1BA /* OrderHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHeaderView.h; sourceTree = "<group>"; };
-		AFE842EA1C05A74D0028A1BA /* OrderHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHeaderView.m; sourceTree = "<group>"; };
 		AFE842ED1C05A7730028A1BA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		AFE842EE1C05A7D50028A1BA /* MyNavigationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationButton.h; sourceTree = "<group>"; };
 		AFE842EF1C05A7D50028A1BA /* MyNavigationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationButton.m; sourceTree = "<group>"; };
@@ -130,6 +147,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFE75B891CB5F33A003447D7 /* Cell展开收起 */ = {
+			isa = PBXGroup;
+			children = (
+				AFE75B8A1CB5F33A003447D7 /* Controller */,
+				AFE75B8B1CB5F33A003447D7 /* Model */,
+				AFE75B8E1CB5F33A003447D7 /* View */,
+			);
+			path = "Cell展开收起";
+			sourceTree = "<group>";
+		};
+		AFE75B8A1CB5F33A003447D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AFE75B961CB5F358003447D7 /* FoldCellViewController.h */,
+				AFE75B971CB5F358003447D7 /* FoldCellViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AFE75B8B1CB5F33A003447D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFE75B8C1CB5F33A003447D7 /* CellNumberModel.h */,
+				AFE75B8D1CB5F33A003447D7 /* CellNumberModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AFE75B8E1CB5F33A003447D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFE75B8F1CB5F33A003447D7 /* OrderCell.h */,
+				AFE75B901CB5F33A003447D7 /* OrderCell.m */,
+				AFE75B911CB5F33A003447D7 /* OrderHeaderView.h */,
+				AFE75B921CB5F33A003447D7 /* OrderHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFE75B991CB5F475003447D7 /* Cell中文字自适应高度 */ = {
+			isa = PBXGroup;
+			children = (
+				AFE75B9A1CB5F475003447D7 /* Controller */,
+				AFE75B9B1CB5F475003447D7 /* Model */,
+				AFE75B9C1CB5F475003447D7 /* View */,
+			);
+			path = "Cell中文字自适应高度";
+			sourceTree = "<group>";
+		};
+		AFE75B9A1CB5F475003447D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AFE75B9D1CB5F498003447D7 /* WordsInCellFoldVC.h */,
+				AFE75B9E1CB5F498003447D7 /* WordsInCellFoldVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AFE75B9B1CB5F475003447D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFE75BA31CB5F828003447D7 /* RemarksCellHeightModel.h */,
+				AFE75BA41CB5F828003447D7 /* RemarksCellHeightModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AFE75B9C1CB5F475003447D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFE75BA01CB5F762003447D7 /* RemarksTableViewCell.h */,
+				AFE75BA11CB5F762003447D7 /* RemarksTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFE75BA81CB639F6003447D7 /* 整个TableView中只有一个Cell有展开收起功能 */ = {
+			isa = PBXGroup;
+			children = (
+				AFE75BA91CB639F6003447D7 /* Controller */,
+				AFE75BAA1CB639F6003447D7 /* View */,
+			);
+			path = "整个TableView中只有一个Cell有展开收起功能";
+			sourceTree = "<group>";
+		};
+		AFE75BA91CB639F6003447D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AFE75BAB1CB63A28003447D7 /* OneCellFoldViewController.h */,
+				AFE75BAC1CB63A28003447D7 /* OneCellFoldViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AFE75BAA1CB639F6003447D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AFE842791C0586FC0028A1BA = {
 			isa = PBXGroup;
 			children = (
@@ -155,14 +273,17 @@
 			children = (
 				AFE842881C0586FC0028A1BA /* AppDelegate.h */,
 				AFE842891C0586FC0028A1BA /* AppDelegate.m */,
+				AFE8428B1C0586FC0028A1BA /* ViewController.h */,
+				AFE8428C1C0586FC0028A1BA /* ViewController.m */,
 				AFE842EE1C05A7D50028A1BA /* MyNavigationButton.h */,
 				AFE842EF1C05A7D50028A1BA /* MyNavigationButton.m */,
+				AFE75B891CB5F33A003447D7 /* Cell展开收起 */,
+				AFE75B991CB5F475003447D7 /* Cell中文字自适应高度 */,
+				AFE75BA81CB639F6003447D7 /* 整个TableView中只有一个Cell有展开收起功能 */,
 				AFE842B91C0588C10028A1BA /* Masonry */,
-				AFE842B81C0588C10028A1BA /* Controller */,
-				AFE842D41C0588C10028A1BA /* Model */,
-				AFE842D51C0588C10028A1BA /* View */,
 				AFE8428E1C0586FC0028A1BA /* Main.storyboard */,
 				AFE842911C0586FC0028A1BA /* Assets.xcassets */,
+				AFE75BA61CB5FADF003447D7 /* Images.xcassets */,
 				AFE842931C0586FC0028A1BA /* LaunchScreen.storyboard */,
 				AFE842961C0586FC0028A1BA /* Info.plist */,
 				AFE842851C0586FC0028A1BA /* Supporting Files */,
@@ -198,15 +319,6 @@
 			path = FoldCellDemoUITests;
 			sourceTree = "<group>";
 		};
-		AFE842B81C0588C10028A1BA /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				AFE8428B1C0586FC0028A1BA /* ViewController.h */,
-				AFE8428C1C0586FC0028A1BA /* ViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		AFE842B91C0588C10028A1BA /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,26 +350,6 @@
 				AFE842D31C0588C10028A1BA /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
-			sourceTree = "<group>";
-		};
-		AFE842D41C0588C10028A1BA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				AFE842E41C05A73C0028A1BA /* CellNumberModel.h */,
-				AFE842E51C05A73C0028A1BA /* CellNumberModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		AFE842D51C0588C10028A1BA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				AFE842E71C05A74D0028A1BA /* OrderCell.h */,
-				AFE842E81C05A74D0028A1BA /* OrderCell.m */,
-				AFE842E91C05A74D0028A1BA /* OrderHeaderView.h */,
-				AFE842EA1C05A74D0028A1BA /* OrderHeaderView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +458,7 @@
 				AFE842D61C0588C10028A1BA /* Info.plist in Resources */,
 				AFE842951C0586FC0028A1BA /* LaunchScreen.storyboard in Resources */,
 				AFE842F21C05A8240028A1BA /* OrderList.plist in Resources */,
+				AFE75BA71CB5FADF003447D7 /* Images.xcassets in Resources */,
 				AFE842921C0586FC0028A1BA /* Assets.xcassets in Resources */,
 				AFE842901C0586FC0028A1BA /* Main.storyboard in Resources */,
 			);
@@ -392,23 +485,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE75B9F1CB5F498003447D7 /* WordsInCellFoldVC.m in Sources */,
+				AFE75B951CB5F33A003447D7 /* OrderHeaderView.m in Sources */,
 				AFE842DE1C0588C10028A1BA /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				AFE75BA51CB5F828003447D7 /* RemarksCellHeightModel.m in Sources */,
 				AFE842DC1C0588C10028A1BA /* MASViewConstraint.m in Sources */,
 				AFE842F01C05A7D50028A1BA /* MyNavigationButton.m in Sources */,
+				AFE75BA21CB5F762003447D7 /* RemarksTableViewCell.m in Sources */,
 				AFE842D71C0588C10028A1BA /* MASCompositeConstraint.m in Sources */,
 				AFE842DD1C0588C10028A1BA /* NSArray+MASAdditions.m in Sources */,
 				AFE8428D1C0586FC0028A1BA /* ViewController.m in Sources */,
+				AFE75B931CB5F33A003447D7 /* CellNumberModel.m in Sources */,
 				AFE8428A1C0586FC0028A1BA /* AppDelegate.m in Sources */,
-				AFE842E61C05A73C0028A1BA /* CellNumberModel.m in Sources */,
+				AFE75B941CB5F33A003447D7 /* OrderCell.m in Sources */,
 				AFE842DA1C0588C10028A1BA /* MASLayoutConstraint.m in Sources */,
 				AFE842871C0586FC0028A1BA /* main.m in Sources */,
-				AFE842EB1C05A74D0028A1BA /* OrderCell.m in Sources */,
 				AFE842E01C0588C10028A1BA /* ViewController+MASAdditions.m in Sources */,
 				AFE842DF1C0588C10028A1BA /* View+MASAdditions.m in Sources */,
-				AFE842EC1C05A74D0028A1BA /* OrderHeaderView.m in Sources */,
 				AFE842DB1C0588C10028A1BA /* MASViewAttribute.m in Sources */,
+				AFE75BAD1CB63A28003447D7 /* OneCellFoldViewController.m in Sources */,
 				AFE842D81C0588C10028A1BA /* MASConstraint.m in Sources */,
 				AFE842D91C0588C10028A1BA /* MASConstraintMaker.m in Sources */,
+				AFE75B981CB5F358003447D7 /* FoldCellViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

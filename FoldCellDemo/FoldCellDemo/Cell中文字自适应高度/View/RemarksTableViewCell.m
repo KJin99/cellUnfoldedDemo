@@ -1,0 +1,136 @@
+//
+//  RemarksTableViewCell.m
+//  FlowerReceiveDemo
+//
+//  Created by Eyes on 16/2/19.
+//  Copyright © 2016年 DuanGuoLi. All rights reserved.
+//
+
+#import "RemarksTableViewCell.h"
+
+#define W            [UIScreen mainScreen].bounds.size.width
+
+@interface RemarksTableViewCell ()
+
+{
+    NSIndexPath *_cellIndexPath;  // 当前Cell的下标
+}
+
+@end
+
+@implementation RemarksTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        
+        [self layoutUI];
+    }
+    return self;
+}
+
+- (void)setCellContent:(NSString *)contentStr andIsShow:(BOOL)isShow andCellIndexPath:(NSIndexPath *)indexPath
+{
+    _textsLabel.text = contentStr;
+    _cellIndexPath = indexPath;
+    
+     CGRect rect = [_textsLabel.text boundingRectWithSize:CGSizeMake(BOUNDS.size.width-30, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil];
+    if (rect.size.height > 52) {
+        //文字大于三行
+        self.btn.hidden = NO;
+        if (isShow) {
+            _textsLabel.numberOfLines = 0;
+            [_textsLabel mas_remakeConstraints:^(MASConstraintMaker *make){
+                make.left.mas_equalTo(self.contentView.mas_left).offset(15);
+                make.top.mas_equalTo(_infolable.mas_bottom).offset(5);
+                make.width.mas_equalTo(BOUNDS.size.width-30);
+                make.height.mas_equalTo(rect.size.height);
+            }];
+        } else {
+            [_textsLabel mas_remakeConstraints:^(MASConstraintMaker *make){
+                make.left.mas_equalTo(self.contentView.mas_left).offset(15);
+                make.top.mas_equalTo(_infolable.mas_bottom).offset(5);
+                make.width.mas_equalTo(BOUNDS.size.width-30);
+                make.height.mas_equalTo(52);
+            }];
+        }
+    } else {
+        //文字小于三行
+        _textsLabel.numberOfLines = 3;
+        self.btn.hidden = YES;
+        [_textsLabel mas_remakeConstraints:^(MASConstraintMaker *make){
+            make.left.mas_equalTo(self.contentView.mas_left).offset(15);
+            make.top.mas_equalTo(_infolable.mas_bottom).offset(5);
+            make.width.mas_equalTo(BOUNDS.size.width-30);
+            make.height.mas_equalTo(rect.size.height+1);
+        }];
+    }
+}
+
+- (void)moreButtonClicked
+{
+    self.btn.selected = !self.btn.selected;
+    if (self.btn.selected) {
+        [self.btn setImage:[UIImage imageNamed:@"xiala"] forState:UIControlStateNormal];
+    }else{
+        [self.btn setImage:[UIImage imageNamed:@"shq"] forState:UIControlStateNormal];
+    }
+    
+    // 记录当前按钮的选中状态，并传递给Controller
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [dic setObject:[NSNumber numberWithInteger:_cellIndexPath.row] forKey:@"row"];
+    [dic setObject:[NSNumber numberWithBool:self.btn.selected] forKey:@"isShow"];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(remarksCellShowContrntWithDic:andCellIndexPath:)]) {
+        [self.delegate remarksCellShowContrntWithDic:dic andCellIndexPath:_cellIndexPath];
+    }
+}
+
+- (void)layoutUI
+{
+    _infolable = [[UILabel alloc]init];
+    _infolable.text = @"备注消息";
+    _infolable.textColor = CLColor(102, 102, 102);
+    _infolable.font = [UIFont systemFontOfSize:12];
+    [self.contentView addSubview:_infolable];
+    [_infolable mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.mas_equalTo(self.contentView.mas_left).offset(15);
+        make.top.mas_equalTo(self.contentView.mas_top).offset(15);
+        make.width.mas_equalTo(BOUNDS.size.width/2);
+        make.height.mas_equalTo(12);
+    }];
+    
+    _textsLabel = [[UILabel alloc]init];
+//    _textsLabel.lineBreakMode = NSLineBreakByCharWrapping;
+    _textsLabel.numberOfLines = 3;
+    _textsLabel.font = [UIFont systemFontOfSize:12];
+    _textsLabel.textColor = CLColor(153, 153, 153);
+    [self.contentView addSubview:_textsLabel];
+    
+    _btn = [[UIButton alloc]init];
+    [_btn setImage:[UIImage imageNamed:@"shq"] forState:UIControlStateNormal];
+    [_btn setImage:[UIImage imageNamed:@"xiala"] forState:UIControlStateHighlighted];
+    [_btn addTarget:self action:@selector(moreButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [_btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [self.contentView addSubview:_btn];
+    [_btn mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.mas_equalTo(self.contentView.mas_left);
+        make.top.mas_equalTo(_textsLabel.mas_bottom).offset(-10);
+        make.width.mas_equalTo(BOUNDS.size.width);
+        make.height.mas_equalTo(30);
+    }];
+}
+
+
+- (void)awakeFromNib {
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
+@end
