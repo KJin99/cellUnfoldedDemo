@@ -25,7 +25,7 @@
 // 存放头视图的字典
 @property (nonatomic, strong) NSMutableDictionary *sectionHeaderView;
 
-@property (nonatomic, copy) NSString *showAll; // YES展示全部，NO收起全部
+@property (nonatomic, copy) NSString *showAll; // YES展开全部，NO收起全部
 
 @end
 
@@ -65,6 +65,7 @@
     [self orderTable];
 }
 
+#pragma 展开全部、收起全部按钮点击事件
 - (void)rightBarButtonItemAction:(UIButton *)sender
 {
     if ([sender.titleLabel.text isEqualToString:@"全部展开"]) {
@@ -75,6 +76,7 @@
         self.showAll = @"close";
     }
     
+    // 将存放Cell展开状态的字典中所有对象都改为展开或收起
     for (int i = 0; i < self.sectionHeaderView.count; i++) {
         OrderHeaderView *headerView = [self.sectionHeaderView objectForKey:[NSString stringWithFormat:@"%d", i]];
         if ([self.showAll isEqualToString:@"show"]) {
@@ -139,7 +141,7 @@
     OrderHeaderView *headerView = [self.sectionHeaderView objectForKey:[NSString stringWithFormat:@"%lu", section]];
     if (headerView == nil) {
         headerView = [[OrderHeaderView alloc] initWithFrame:CGRectMake(0, 0, BOUNDS.size.width, 20)];
-        [headerView setCellNumber:_orderArray andIsShow:[[self.sectionIsShowAll objectForKey:@"section"] boolValue] section:section];
+        [headerView setCellNumber:_orderArray section:section];
         [self.sectionHeaderView setObject:headerView forKey:[NSString stringWithFormat:@"%lu", section]];
     }
     
@@ -152,6 +154,7 @@
     {
         [weakSelf.sectionIsShowAll setObject:[dic objectForKey:@"isShow"] forKey:[NSString stringWithFormat:@"%@",[dic objectForKey:@"section"]]];
         
+         // 为了更好的展示给用户，此处加了一个展开全部和收起全部的按钮，该按钮的显示及操作如下所示
         
         int showNum = 0;
         int closeNum = 0;
@@ -181,6 +184,7 @@
 {
     NSArray *rowAr = [[_orderArray objectAtIndex:section] objectForKey:@"array"];
     
+    // 先判断是否存放过该secion分组对应的展开状态，若没存过则先默认为收起状态
     if ([self.sectionIsShowAll objectForKey:[NSString stringWithFormat:@"%ld", section]] == nil) {
         [self.sectionIsShowAll setObject:[NSNumber numberWithBool:NO] forKey:[NSString stringWithFormat:@"%ld", section]];
     }

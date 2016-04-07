@@ -37,8 +37,8 @@
     
      CGRect rect = [_textsLabel.text boundingRectWithSize:CGSizeMake(BOUNDS.size.width-30, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} context:nil];
     if (rect.size.height > 52) {
-        //文字大于三行
-        self.btn.hidden = NO;
+        // 文字大于三行，显示展开收起按钮
+        self.moreBtn.hidden = NO;
         if (isShow) {
             _textsLabel.numberOfLines = 0;
             [_textsLabel mas_remakeConstraints:^(MASConstraintMaker *make){
@@ -56,32 +56,35 @@
             }];
         }
     } else {
-        //文字小于三行
+        // 文字小于三行，隐藏展开收起按钮
         _textsLabel.numberOfLines = 3;
-        self.btn.hidden = YES;
+        self.moreBtn.hidden = YES;
         [_textsLabel mas_remakeConstraints:^(MASConstraintMaker *make){
             make.left.mas_equalTo(self.contentView.mas_left).offset(15);
             make.top.mas_equalTo(_infolable.mas_bottom).offset(5);
             make.width.mas_equalTo(BOUNDS.size.width-30);
-            make.height.mas_equalTo(rect.size.height+1);
+            make.height.mas_equalTo(rect.size.height+1);  // 由于系统计算的那个高度有时候会有1像素到2像素的误差，所以这里把高度+1
         }];
     }
 }
 
+#pragma mark - 显示更多按钮点击事件
 - (void)moreButtonClicked
 {
-    self.btn.selected = !self.btn.selected;
-    if (self.btn.selected) {
-        [self.btn setImage:[UIImage imageNamed:@"xiala"] forState:UIControlStateNormal];
+    self.moreBtn.selected = !self.moreBtn.selected;
+    if (self.moreBtn.selected) {
+        [self.moreBtn setImage:[UIImage imageNamed:@"xiala"] forState:UIControlStateNormal];
     }else{
-        [self.btn setImage:[UIImage imageNamed:@"shq"] forState:UIControlStateNormal];
+        [self.moreBtn setImage:[UIImage imageNamed:@"shq"] forState:UIControlStateNormal];
     }
     
     // 记录当前按钮的选中状态，并传递给Controller
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:[NSNumber numberWithInteger:_cellIndexPath.row] forKey:@"row"];
-    [dic setObject:[NSNumber numberWithBool:self.btn.selected] forKey:@"isShow"];
+    [dic setObject:[NSNumber numberWithBool:self.moreBtn.selected] forKey:@"isShow"];
     
+    
+    // 协议回调，改变Controller中存放Cell展开收起状态的字典
     if (self.delegate && [self.delegate respondsToSelector:@selector(remarksCellShowContrntWithDic:andCellIndexPath:)]) {
         [self.delegate remarksCellShowContrntWithDic:dic andCellIndexPath:_cellIndexPath];
     }
@@ -108,13 +111,13 @@
     _textsLabel.textColor = CLColor(153, 153, 153);
     [self.contentView addSubview:_textsLabel];
     
-    _btn = [[UIButton alloc]init];
-    [_btn setImage:[UIImage imageNamed:@"shq"] forState:UIControlStateNormal];
-    [_btn setImage:[UIImage imageNamed:@"xiala"] forState:UIControlStateHighlighted];
-    [_btn addTarget:self action:@selector(moreButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    [_btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [self.contentView addSubview:_btn];
-    [_btn mas_makeConstraints:^(MASConstraintMaker *make){
+    _moreBtn = [[UIButton alloc]init];
+    [_moreBtn setImage:[UIImage imageNamed:@"shq"] forState:UIControlStateNormal];
+    [_moreBtn setImage:[UIImage imageNamed:@"xiala"] forState:UIControlStateHighlighted];
+    [_moreBtn addTarget:self action:@selector(moreButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [_moreBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [self.contentView addSubview:_moreBtn];
+    [_moreBtn mas_makeConstraints:^(MASConstraintMaker *make){
         make.left.mas_equalTo(self.contentView.mas_left);
         make.top.mas_equalTo(_textsLabel.mas_bottom).offset(-10);
         make.width.mas_equalTo(BOUNDS.size.width);

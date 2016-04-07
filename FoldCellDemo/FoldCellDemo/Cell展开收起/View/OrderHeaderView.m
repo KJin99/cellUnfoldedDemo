@@ -49,7 +49,7 @@
     return self;
 }
 
-- (void)setCellNumber:(NSArray *)array andIsShow:(BOOL)isShow section:(NSInteger)section
+- (void)setCellNumber:(NSArray *)array section:(NSInteger)section
 {
     self.section = section;
     [_moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -71,8 +71,9 @@
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:[NSNumber numberWithBool:self.moreBtn.selected] forKey:@"isShow"];
     [dic setObject:[NSNumber numberWithInteger:self.section] forKey:@"section"];
-    self.MoreBlock (dic);
     
+    // 笔者是通过block更改的controller中的展开收起的存储状态，实际中也可使用协议代理的方法
+    self.MoreBlock (dic);
 }
 
 

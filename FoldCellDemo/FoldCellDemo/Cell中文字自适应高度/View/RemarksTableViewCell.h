@@ -20,7 +20,7 @@
 
 @property (nonatomic ,strong) UILabel *infolable;
 @property (nonatomic ,strong) UILabel *textsLabel;
-@property (nonatomic ,strong) UIButton *btn;
+@property (nonatomic ,strong) UIButton *moreBtn;   // 展开收起按钮
 
 - (void)setCellContent:(NSString *)contentStr andIsShow:(BOOL)isShow andCellIndexPath:(NSIndexPath *)indexPath;
 
